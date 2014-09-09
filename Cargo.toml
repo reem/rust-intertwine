@@ -1,0 +1,11 @@
+[package]
+
+name = "intertwine"
+version = "0.0.1"
+authors = ["Jonathan Reem <jonathan.reem@gmail.com>"]
+
+[lib]
+
+name = "intertwine"
+path = "src/lib.rs"
+
