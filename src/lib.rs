@@ -24,7 +24,9 @@ impl<T: Send, I: Iterator<T> + Send, II: Iterator<I>> Intertwine<T> for II {
         for mut iterator in self {
             let tx = tx.clone();
             spawn(proc() {
-                for x in iterator { tx.send(x) }
+                for x in iterator {
+                    if tx.send_opt(x).is_err() { break }
+                }
             });
         }
 
