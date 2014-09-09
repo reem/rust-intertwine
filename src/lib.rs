@@ -2,7 +2,7 @@
 #![deny(missing_doc)]
 #![deny(warnings)]
 
-//! Intertwine a Vec of blocking Iterators.
+//! Intertwine an Iterator of Iterators.
 
 use std::comm::Receiver;
 
